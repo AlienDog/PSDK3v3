@@ -6,3 +6,5 @@ List of tools in it
 curl [https://curl.haxx.se/]
 
 vitasdk [https://github.com/vitasdk]
+
+vita_portlibs [https://github.com/xerpi/vita_portlibs]
