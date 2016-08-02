@@ -9,6 +9,12 @@ vitasdk [https://github.com/vitasdk]
 
 vita_portlibs [https://github.com/xerpi/vita_portlibs]
 
+ftpvita [https://github.com/xerpi/libftpvita]
+
+vita2d [https://github.com/xerpi/libvita2d]
+
+psp2link [https://github.com/psxdev/psp2link]
+
 You'll need also Cmake for win32 if you want to compile cmake projects and git for windows if you want to clone them.
 
 ===
