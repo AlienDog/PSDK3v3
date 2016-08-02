@@ -15,6 +15,8 @@ vita2d [https://github.com/xerpi/libvita2d]
 
 psp2link [https://github.com/psxdev/psp2link]
 
+debugnet [https://github.com/psxdev/debugnet]
+
 You'll need also Cmake for win32 if you want to compile cmake projects and git for windows if you want to clone them.
 
 ===
