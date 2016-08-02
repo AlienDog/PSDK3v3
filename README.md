@@ -27,7 +27,7 @@ Download the zip by navigating to my github and clicking the green Clone or down
 
 Extract the contents to C: so they show up like this
 
-C:\PSDK3v3-master\<files-here>
+C:\PSDK3v3-master\*
 
 Rename PSDK3v3-master to PSDK3v3
 
