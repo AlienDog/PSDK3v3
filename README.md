@@ -27,10 +27,10 @@ Download the zip by navigating to my github and clicking the green Clone or down
 
 Extract the contents to C: so they show up like this
 
-C:\PSDK3v3-master\*
+C:/PSDK3v3-master/*
 
 Rename PSDK3v3-master to PSDK3v3
 
-That's it! Now you only need to send the msys batch file found at C:\PSDK3v3\MinGW\msys\1.0\msys.bat to Desktop, so you can use it properly.
+That's it! Now you only need to send the msys batch file found at C:/PSDK3v3/MinGW/msys/1.0/msys.bat to Desktop, so you can use it properly.
 
 Enjoy :)
