@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<package id="manifest-0-038-1efe-2a8ab9">
+    <release tarname="bison-2.4.2-1-msys-1.0.13-lic.tar.lzma" />
+    <references>
+        <sysroot id="sysroot-0-011-664d-7cd9c6" />
+    </references>
+    <manifest>
+        <file path="share/doc/bison/2.4.2/COPYING" />
+    </manifest>
+</package>

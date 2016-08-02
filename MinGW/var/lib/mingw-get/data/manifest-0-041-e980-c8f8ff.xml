@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<package id="manifest-0-041-e980-c8f8ff">
+    <release tarname="libcrypt-1.1_1-3-msys-1.0.13-dev.tar.lzma" />
+    <references>
+        <sysroot id="sysroot-0-011-664d-7cd9c6" />
+    </references>
+    <manifest>
+        <dir path="include" />
+        <file path="include/crypt.h" />
+        <dir path="lib" />
+        <file path="lib/libcrypt.a" />
+        <file path="lib/libcrypt.dll.a" />
+    </manifest>
+</package>

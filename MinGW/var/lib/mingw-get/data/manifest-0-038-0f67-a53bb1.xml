@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<package id="manifest-0-038-0f67-a53bb1">
+    <release tarname="libltdl-2.4-1-msys-1.0.15-dev.tar.lzma" />
+    <references>
+        <sysroot id="sysroot-0-011-664d-7cd9c6" />
+    </references>
+    <manifest>
+        <dir path="lib" />
+        <file path="lib/libltdl.a" />
+        <file path="lib/libltdl.dll.a" />
+        <file path="lib/libltdl.la" />
+        <dir path="include" />
+        <dir path="include/libltdl" />
+        <file path="include/libltdl/lt_dlloader.h" />
+        <file path="include/libltdl/lt_error.h" />
+        <file path="include/libltdl/lt_system.h" />
+        <file path="include/ltdl.h" />
+    </manifest>
+</package>

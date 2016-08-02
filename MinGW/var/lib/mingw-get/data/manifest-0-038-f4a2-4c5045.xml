@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<package id="manifest-0-038-f4a2-4c5045">
+    <release tarname="bison-2.4.2-1-msys-1.0.13-doc.tar.lzma" />
+    <references>
+        <sysroot id="sysroot-0-011-664d-7cd9c6" />
+    </references>
+    <manifest>
+        <dir path="share/doc" />
+        <dir path="share/doc/bison" />
+        <dir path="share/doc/bison/2.4.2" />
+        <file path="share/doc/bison/2.4.2/AUTHORS" />
+        <file path="share/doc/bison/2.4.2/ChangeLog" />
+        <file path="share/doc/bison/2.4.2/NEWS" />
+        <file path="share/doc/bison/2.4.2/OChangeLog" />
+        <file path="share/doc/bison/2.4.2/PACKAGING" />
+        <file path="share/doc/bison/2.4.2/README" />
+        <file path="share/doc/bison/2.4.2/README-alpha" />
+        <file path="share/doc/bison/2.4.2/THANKS" />
+        <file path="share/doc/bison/2.4.2/TODO" />
+        <dir path="share/doc/MSYS" />
+        <file path="share/doc/MSYS/bison-2.4.2-1-msys.RELEASE_NOTES.txt" />
+        <dir path="share/man" />
+        <dir path="share/man/man1" />
+        <file path="share/man/man1/bison.1" />
+        <file path="share/man/man1/yacc.1" />
+        <dir path="share/info" />
+        <file path="share/info/bison.info" />
+    </manifest>
+</package>

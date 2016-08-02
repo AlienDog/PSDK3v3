@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<package id="manifest-0-036-763b-66ffdd">
+    <release tarname="pexports-0.44-1-mingw32-bin.tar.lzma" />
+    <references>
+        <sysroot id="sysroot-0-002-a7c6-d7dbb5" />
+    </references>
+    <manifest>
+        <dir path="bin" />
+        <file path="bin/pexports.exe" />
+    </manifest>
+</package>

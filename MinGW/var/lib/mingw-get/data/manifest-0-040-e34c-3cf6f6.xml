@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<package id="manifest-0-040-e34c-3cf6f6">
+    <release tarname="pkginfo-0.3-mingw32-alpha-2.1-bin.tar.xz" />
+    <references>
+        <sysroot id="sysroot-0-002-a7c6-d7dbb5" />
+    </references>
+    <manifest>
+        <file path="bin/pkginfo.exe" />
+    </manifest>
+</package>

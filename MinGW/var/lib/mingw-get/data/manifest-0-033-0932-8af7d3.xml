@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<package id="manifest-0-033-0932-8af7d3">
+    <release tarname="automake-4-1-mingw32-lic.tar.lzma" />
+    <references>
+        <sysroot id="sysroot-0-002-a7c6-d7dbb5" />
+    </references>
+    <manifest>
+        <file path="share/doc/automake/4/COPYING" />
+    </manifest>
+</package>

@@ -1,0 +1,13 @@
+prefix=c:/MinGW
+exec_prefix=c:/MinGW
+libdir=c:/MinGW/lib
+sharedlibdir=${exec_prefix}/bin
+includedir=c:/MinGW/include
+
+Name: zlib
+Description: zlib compression library
+Version: 1.2.5
+
+Requires:
+Libs: -L${libdir} -L${sharedlibdir} -lz
+Cflags: -I${includedir}

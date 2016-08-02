@@ -1,0 +1,87 @@
+mingw32 pexports
+========================================================================
+Extract exported symbols from a 32bit or 64bit EXE or DLL. Pexports can
+perform a simple check on the size of the arguments of the exported
+functions, provided there is a header with prototypes for the functions.
+This is useful when you want the decorated function names for functions
+using stdcall or fastcall calling convention.
+
+Note that in order to detect the calling convention, you must specify
+on the command line the headers to parse. If the symbols are not
+declared in those headers, then the proper decorations cannot be
+computed.
+
+The 'gendef' tool operates in a different way: it disassembles the
+function prologues of each function to determine the calling convention
+and argument stack usage. This allows to not require a preprocessor
+nor complete headers, but has certain other failure modes.  Try both!
+
+Runtime requirements
+  n/a
+
+Build requirements (these, or newer)
+  MinGW compiler
+    binutils-2.19.1-mingw32-bin.tar.gz
+    gcc-core-4.4.0-mingw32-bin.tar.gz
+    gcc-core-4.4.0-mingw32-dll.tar.gz
+    mingwrt-3.15.2-mingw32-dev.tar.gz
+    mingwrt-3.15.2-mingw32-dll.tar.gz
+    w32api-3.13-mingw32-dev.tar.gz
+    gmp-4.2.4-mingw32-dll.tar.gz
+    mpfr-2.4.1-mingw32-dll.tar.gz
+
+<<<< FIXME: fill this in as part of mingw-get installer rollout >>>>> 
+  MSYS Environment
+    msysCORE-1.0.11-bin.tar.gz (e.g. stock MSYS 1.0.11 installation)
+    coreutils-5.97-MSYS-1.0.11-snapshot.tar.bz2
+<<<< END FIXME >>>>
+     
+Canonical homepage:
+  http://mingw.cvs.sourceforge.net/viewvc/mingw/utils/pexports/
+
+Canonical download:
+  http://tml.pp.fi/pexports-0.44.zip
+  # sadly, this .zip file is a tarbomb. I've repackaged it
+  # as a .tar.lzma such that all files are in a pexport-0.44/
+  # directory. This complicates the mingwPORT's download
+  # behavior...
+
+License:
+  GPLv2+
+
+Language:
+  C
+
+========================================================================
+
+Build instructions:
+  unpack pexports-0.44-1-mingw32-src.tar.lzma
+  unpack pexports-0.44-1-mingwPORT.tar.bz2
+  cd pexports-0.44/mingwPORT
+  ./mingwPORT.sh [--no-cleanup] [--check]
+
+This will create:
+  pexports-0.44-1-mingw32-bin.tar.lzma
+  pexports-0.44-1-mingw32-doc.tar.lzma
+  pexports-0.44-1-mingw32-lic.tar.lzma
+  pexports-0.44-1-mingw32-src.tar.lzma
+
+========================================================================
+
+Files included in the binary distro
+
+  bin/pexports.exe
+  share/doc/MinGW/pexports-0.44-1-mingw32.RELEASE_NOTES
+  share/doc/pexports/COPYING
+  share/doc/pexports/ChangeLog
+  share/doc/pexports/README
+
+========================================================================
+
+Port Notes:
+
+----------  pexports-0.44-1 -- 2009 Sep 11 -----------
+* First release of pexports under the new packaging standard.
+* Split out from mingw-utils-0.3 and based on Tor Lilqvist's
+  version which supports 32bit and 64bit objects.
+

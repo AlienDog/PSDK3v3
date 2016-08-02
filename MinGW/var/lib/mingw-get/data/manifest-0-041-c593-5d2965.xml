@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<package id="manifest-0-041-c593-5d2965">
+    <release tarname="libopts-5.10.1-1-msys-1.0.15-dev.tar.lzma" />
+    <references>
+        <sysroot id="sysroot-0-011-664d-7cd9c6" />
+    </references>
+    <manifest>
+        <file path="bin/autoopts-config" />
+        <dir path="lib" />
+        <file path="lib/libopts.a" />
+        <file path="lib/libopts.dll.a" />
+        <file path="lib/libopts.la" />
+        <dir path="lib/pkgconfig" />
+        <file path="lib/pkgconfig/autoopts.pc" />
+        <dir path="include" />
+        <dir path="include/autoopts" />
+        <file path="include/autoopts/options.h" />
+        <file path="include/autoopts/usage-txt.h" />
+        <dir path="share/aclocal" />
+        <file path="share/aclocal/ag_macros.m4" />
+        <file path="share/aclocal/autoopts.m4" />
+        <file path="share/aclocal/extensions.m4" />
+        <file path="share/aclocal/libopts.m4" />
+        <file path="share/aclocal/liboptschk.m4" />
+        <file path="share/aclocal/snprintfv.m4" />
+        <file path="share/aclocal/unlocked-io.m4" />
+        <dir path="share/doc/autogen/5.10.1/headers" />
+        <file path="share/doc/autogen/5.10.1/headers/inttypes.h" />
+        <file path="share/doc/autogen/5.10.1/headers/stdint.h" />
+    </manifest>
+</package>

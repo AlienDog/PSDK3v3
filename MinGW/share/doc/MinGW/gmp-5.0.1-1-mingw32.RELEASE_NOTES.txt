@@ -1,0 +1,75 @@
+mingw gmp
+========================================================================
+GMP is a free library for arbitrary precision arithmetic, operating on
+signed integers, rational numbers, and floating point numbers. There is
+no practical limit to the precision except the ones implied by the
+available memory in the machine GMP runs on. GMP has a rich set of
+functions, and the functions have a regular interface. 
+
+Runtime requirements:
+  libgmpxx-5.0.1-X-mingw32-dll-4.tar.lzma
+    libgmp-5.0.1-X-mingw32-dll-10.tar.lzma
+    gcc-core-4.4.0-mingw32-dll.tar.gz
+
+Build requirements:
+  MinGW Compiler
+    binutils-2.20-1-mingw32-bin.tar.gz
+    gcc-c++-4.4.0-mingw32-bin.tar.gz
+    gcc-c++-4.4.0-mingw32-dll.tar.gz
+    gcc-core-4.4.0-mingw32-bin.tar.gz
+    gcc-core-4.4.0-mingw32-dll.tar.gz
+    gmp-4.2.4-mingw32-dll.tar.gz
+    libgmp-5.0.1-1-mingw32-dll-10.tar.lzma
+    libmpfr-2.4.1-1-mingw32-dll-1.tar.lzma
+    mingwrt-3.17-mingw32-dev.tar.gz
+    w32api-3.14-mingw32-dev.tar.gz
+
+  MSYS Environment
+    bash-3.1.17-2-msys-1.0.11-bin.tar.lzma
+    bzip2-1.0.5-1-msys-1.0.11-bin.tar.gz
+    coreutils-5.97-2-msys-1.0.11-bin.tar.lzma
+    diffutils-2.8.7.20071206cvs-2-msys-1.0.11-bin.tar.lzma
+    findutils-4.4.2-1-msys-1.0.11-bin.tar.lzma
+    gawk-3.1.7-1-msys-1.0.11-bin.tar.lzma
+    grep-2.5.4-1-msys-1.0.11-bin.tar.lzma
+    libbz2-1.0.5-1-msys-1.0.11-dll-1.tar.gz
+    liblzma-4.999.9beta_20091209-1-msys-1.0.12-dll-1.tar.gz
+    m4-1.4.13-1-msys-1.0.11-bin.tar.lzma
+    make-3.81-2-msys-1.0.11-bin.tar.lzma
+    msysCORE-1.0.13-2-msys-1.0.13-bin.tar.lzma
+    sed-4.2.1-1-msys-1.0.11-bin.tar.lzma
+    tar-1.22-1-msys-1.0.11-bin.tar.lzma
+    xz-4.999.9beta_20091209-1-msys-1.0.12-bin.tar.gz
+
+Canonical homepage:
+  http://gmplib.org/
+
+Canonical download:
+  http://ftp.gnu.org/gnu/gmp/
+  
+License:
+  LGPLv3+
+
+Language:
+  C/C++
+
+========================================================================
+
+Build instructions:
+  unpack gmp-5.0.1-X-mingw32-src.tar.lzma
+  <path-to-source>/pkgbuild
+See <path-to-source>/pkgbuild -h for further options.
+
+This will create:
+  gmp-5.0.1-X-mingw32-dev.tar.lzma
+  libgmp-5.0.1-X-mingw32-dll-10.tar.lzma
+  libgmpxx-5.0.1-X-mingw32-dll-4.tar.lzma
+  gmp-5.0.1-X-mingw32-doc.tar.lzma
+  gmp-5.0.1-X-mingw32-lic.tar.lzma
+
+========================================================================
+
+Test suite results: all tests pass.
+
+----------  gmp-5.0.1-1 -- 2010 Feb 15 -----------
+* First release.

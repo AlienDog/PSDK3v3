@@ -1,0 +1,97 @@
+msys zlib
+========================================================================
+The zlib compression library provides in-memory compression and
+decompression functions, including integrity checks of the uncompressed
+data.
+
+Runtime requirements:
+  msysCORE-1.0.13-2-msys-1.0.13-bin
+
+Build requirements:
+  binutils-2.19.51-3-msys-1.0.13-bin
+  gcc-3.4.4-3-msys-1.0.13-bin
+  w32api-3.14-3-msys-1.0.12-dev
+
+  Devel Tools and Dependent Libraries 
+    lndir-1.0.1-2-msys-1.0.13-bin
+
+  MSYS Environment
+    msysCORE-1.0.13-2-msys-1.0.13-dev
+    coreutils-5.97-2-msys-1.0.11-bin
+    bash-3.1.17-2-msys-1.0.11-bin
+    make-3.81-2-msys-1.0.11-bin
+    tar-1.22-1-msys-1.0.11-bin
+    bzip2-1.0.5-1-msys-1.0.11-bin
+    xz-4.999.9beta_20091209-1-msys-1.0.12-bin
+    libbz2-1.0.5-1-msys-1.0.11-dll-1
+    liblzma-4.999.9beta_20091209-1-msys-1.0.12-dll-1
+
+Canonical homepage:
+  http://www.zlib.net/
+
+Canonical download:
+  http://www.zlib.net/zlib-1.2.3.tar.bz2
+
+License:
+  The zlib/libpng license (permissive, non-copyleft)
+
+Language:
+  C, asm
+
+========================================================================
+  
+Build instructions:
+  unpack zlib-1.2.3-X-msys-1.0.13-src.tar.lzma
+  ./msys-build-zlib zlib-1.2.3.tar.bz2
+
+This will create:
+  zlib-1.2.3-X-msys-1.0.13-src.tar.lzma
+  zlib-1.2.3-X-msys-1.0.13-doc.tar.lzma
+  zlib-1.2.3-X-msys-1.0.13-lic.tar.lzma
+  zlib-1.2.3-X-msys-1.0.13-dll.tar.lzma
+  zlib-1.2.3-X-msys-1.0.13-dev.tar.lzma
+
+========================================================================
+
+Test suite results
+This section of this document is updated with each new release.
+No history is maintained here.
+
++ make check
+hello world
+zlib version 1.2.3 = 0x1230, compile flags = 0x55
+uncompress(): hello, hello!
+gzread(): hello, hello!
+gzgets() after gzseek:  hello!
+inflate(): hello, hello!
+large_inflate(): OK
+after inflateSync(): hello, hello!
+inflate with dictionary: hello, hello!
+                *** zlib test OK ***
+
+========================================================================
+
+Port Notes:
+
+This build is based on the cygwin source patches, NOT any MinGW
+ones. It is only "lightly" ported -- that is, the sources have not
+been modified to recognize #define __MSYS__.  Therefore, when compiling
+against this library, you should explicitly define the __CYGWIN__
+macro, by adding -D__CYGWIN__ to your CFLAGS.
+
+The DLL is named "msys-z.dll" to preserve consistency with earlier
+msys releases of zlib. Because it carries no explicit version number,
+the -dll package does not have a "Component Version" field, unlike
+most -dll packages.
+
+----------  zlib-1.2.3-2 -- 2010 Jan 28 -----------
+* Rebuild against msys-1.0.13, using (msys)gcc-3.4.4
+  and (msys)binutils-2.19.51.
+* Use -O3 -fno-unit-at-a-time to avoid optimization bug
+  in latest msys-gcc. Also, don't use -mms-bitfields
+  when compiling msys binaries.
+
+----------  zlib-1.2.3-1 -- 2009 Jul 26 -----------
+* First release of zlib for msys using new packaging standard.
+* Uses patches derived from cygwin's zlib-1.2.3-10 package.
+

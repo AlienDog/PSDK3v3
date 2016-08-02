@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<package id="manifest-0-038-9da7-c960b8">
+    <release tarname="libpdcurses-3.4-1-mingw32-dev.tar.lzma" />
+    <references>
+        <sysroot id="sysroot-0-002-a7c6-d7dbb5" />
+    </references>
+    <manifest>
+        <file path="lib/libpdcurses.a" />
+        <file path="lib/libpdcurses.dll.a" />
+        <file path="lib/libpdcursesu.a" />
+        <file path="lib/libpdcursesu.dll.a" />
+        <file path="lib/libpdcursesw.a" />
+        <file path="lib/libpdcursesw.dll.a" />
+        <file path="include/curses.h" />
+        <file path="include/panel.h" />
+    </manifest>
+</package>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<package id="manifest-0-038-7e71-5579b0">
+    <release tarname="bison-2.4.2-1-msys-1.0.13-rtm.tar.lzma" />
+    <references>
+        <sysroot id="sysroot-0-011-664d-7cd9c6" />
+    </references>
+    <manifest>
+        <file path="share/locale/ast/LC_MESSAGES/bison-runtime.mo" />
+        <file path="share/locale/da/LC_MESSAGES/bison-runtime.mo" />
+        <file path="share/locale/de/LC_MESSAGES/bison-runtime.mo" />
+        <file path="share/locale/el/LC_MESSAGES/bison-runtime.mo" />
+        <file path="share/locale/es/LC_MESSAGES/bison-runtime.mo" />
+        <file path="share/locale/et/LC_MESSAGES/bison-runtime.mo" />
+        <file path="share/locale/fi/LC_MESSAGES/bison-runtime.mo" />
+        <file path="share/locale/fr/LC_MESSAGES/bison-runtime.mo" />
+        <file path="share/locale/ga/LC_MESSAGES/bison-runtime.mo" />
+        <file path="share/locale/hr/LC_MESSAGES/bison-runtime.mo" />
+        <file path="share/locale/id/LC_MESSAGES/bison-runtime.mo" />
+        <file path="share/locale/it/LC_MESSAGES/bison-runtime.mo" />
+        <file path="share/locale/ja/LC_MESSAGES/bison-runtime.mo" />
+        <file path="share/locale/ky/LC_MESSAGES/bison-runtime.mo" />
+        <file path="share/locale/lt/LC_MESSAGES/bison-runtime.mo" />
+        <file path="share/locale/lv/LC_MESSAGES/bison-runtime.mo" />
+        <file path="share/locale/ms/LC_MESSAGES/bison-runtime.mo" />
+        <file path="share/locale/nb/LC_MESSAGES/bison-runtime.mo" />
+        <file path="share/locale/nl/LC_MESSAGES/bison-runtime.mo" />
+        <file path="share/locale/pl/LC_MESSAGES/bison-runtime.mo" />
+        <file path="share/locale/pt/LC_MESSAGES/bison-runtime.mo" />
+        <file path="share/locale/pt_BR/LC_MESSAGES/bison-runtime.mo" />
+        <file path="share/locale/ro/LC_MESSAGES/bison-runtime.mo" />
+        <file path="share/locale/ru/LC_MESSAGES/bison-runtime.mo" />
+        <file path="share/locale/sl/LC_MESSAGES/bison-runtime.mo" />
+        <file path="share/locale/sv/LC_MESSAGES/bison-runtime.mo" />
+        <file path="share/locale/th/LC_MESSAGES/bison-runtime.mo" />
+        <file path="share/locale/tr/LC_MESSAGES/bison-runtime.mo" />
+        <file path="share/locale/uk/LC_MESSAGES/bison-runtime.mo" />
+        <file path="share/locale/vi/LC_MESSAGES/bison-runtime.mo" />
+        <file path="share/locale/zh_CN/LC_MESSAGES/bison-runtime.mo" />
+        <file path="share/locale/zh_TW/LC_MESSAGES/bison-runtime.mo" />
+    </manifest>
+</package>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<package id="manifest-0-038-6c8c-41e891">
+    <release tarname="flex-2.5.35-2-msys-1.0.13-doc.tar.lzma" />
+    <references>
+        <sysroot id="sysroot-0-011-664d-7cd9c6" />
+    </references>
+    <manifest>
+        <dir path="share/doc" />
+        <dir path="share/doc/flex" />
+        <dir path="share/doc/flex/2.5.35" />
+        <file path="share/doc/flex/2.5.35/ABOUT-NLS" />
+        <file path="share/doc/flex/2.5.35/AUTHORS" />
+        <file path="share/doc/flex/2.5.35/ChangeLog" />
+        <file path="share/doc/flex/2.5.35/flex.pdf" />
+        <file path="share/doc/flex/2.5.35/NEWS" />
+        <file path="share/doc/flex/2.5.35/ONEWS" />
+        <file path="share/doc/flex/2.5.35/README" />
+        <file path="share/doc/flex/2.5.35/README-alpha" />
+        <file path="share/doc/flex/2.5.35/README.cvs" />
+        <file path="share/doc/flex/2.5.35/THANKS" />
+        <file path="share/doc/flex/2.5.35/TODO" />
+        <dir path="share/doc/MSYS" />
+        <file path="share/doc/MSYS/flex-2.5.35-2-msys.RELEASE_NOTES.txt" />
+        <dir path="share/man" />
+        <dir path="share/man/man1" />
+        <file path="share/man/man1/flex.1" />
+        <dir path="share/info" />
+        <file path="share/info/flex.info" />
+        <file path="share/info/flex.info-1" />
+        <file path="share/info/flex.info-2" />
+    </manifest>
+</package>

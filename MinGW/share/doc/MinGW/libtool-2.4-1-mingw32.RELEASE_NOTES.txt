@@ -1,0 +1,151 @@
+mingw libtool
+========================================================================
+The GNU shared library generation tool.  mingw libtool is configured
+to operate as part of a toolchain for developing mingw libraries and
+applications (that is, native win32 binaries, as opposed to
+msys-dependent ones).
+
+Proper operation of this libtool distribution requires a working MSYS
+installation, as well as certain other elements available from the
+MinGW team (http://www.mingw.org/) as listed below.  However, this
+libtool distribution was configured as part of the "mingw32" subsystem,
+and should be installed into the /mingw directory (which is usually,
+but not always, C:\MinGW).  Thus, libtool is a hybrid: it is configured
+for the "mingw32" subsystem, but unlike most mingw32 elements, requires
+MSYS.  This rather odd situation is necessary for a number of reasons
+(see the References section below).
+
+However, the libltdl shared library itself will operate correctly
+without an MSYS installation.
+
+Runtime (and build) requirements:
+  MSYS Environment
+    msysCORE-1.0.15-1-msys-1.0.15-bin
+    coreutils-5.97-3-msys-1.0.13-bin
+    bash-3.1.17-3-msys-1.0.13-bin
+    sed-4.2.1-2-msys-1.0.13-bin
+    file-5.04-1-msys-1.0.13-bin
+    m4-1.4.14-1-msys-1.0.13-bin
+    texinfo-4.13a-2-msys-1.0.13-bin
+    perl-5.6.1_2-2-msys-1.0.13-bin
+    libcrypt-1.1_1-3-msys-1.0.13-dll-0
+    libgdbm-1.8.3-3-msys-1.0.13-dll-3
+    libintl-0.17-2-msys-dll-8
+    libiconv-1.13.1-2-msys-1.0.13-dll-2
+
+  MinGW Compiler
+    gcc-core-4.5.0-1-mingw32-bin
+    binutils-2.20.51-1-mingw32-bin
+    w32api-3.14-mingw32-dev
+    mingwrt-3.18-mingw32-dev
+    libexpat-2.0.1-1-mingw32-dll-1
+    libgmp-5.0.1-1-mingw32-dll-10
+    libmpfr-2.4.1-1-mingw32-dll-1
+    libmpc-0.8.1-1-mingw32-dll-2
+    libssp-4.5.0-1-mingw32-dll-0
+    libgomp-4.5.0-1-mingw32-dll-1
+    libgcc-4.5.0-1-mingw32-dll-1
+
+  MinGW AutoTools
+    autoconf-9-1-mingw32-bin
+    autoconf2.5-2.67-1-mingw32-bin
+    automake-4-1-mingw32-bin
+    automake1.11-1.11.1-1-mingw32-bin
+
+Canonical homepage:
+  http://www.gnu.org/software/libtool/libtool.html
+
+Canonical download:
+  ftp://ftp.gnu.org/pub/gnu/libtool/
+
+License:
+  GPL (libltdl: LGPL)
+
+Language:
+  m4, sh (libltdl: C)
+
+===========================================================
+
+Build instructions:
+  unpack libtool-2.4-1-mingw32-src.tar.gz
+  cd automake-2.4/mingwPORT
+  ./mingwPORT.sh [--no-cleanup] [--check]
+
+This will create:
+  libtool-2.4-1-mingw32-src.tar.gz
+  libtool-2.4-1-mingw32-bin.tar.gz
+  libtool-2.4-1-mingw32-lic.tar.gz
+  libtool-2.4-1-mingw32-doc.tar.gz
+  libltdl-2.4-1-mingw32-dll-7.tar.gz
+  libltdl-2.4-1-mingw32-dev.tar.gz
+
+===========================================================
+
+Test suite results
+
+"Old" tests:
+------------
+All 104 tests passed
+(2 tests were not run)
+** 18 fortran tests were not even counted, and I neglected to install
+   fortran before running the tests **
+
+This represents an upstream fix to a bug that used to cause failures in
+  tests/mdemo-exec.test
+  tests/mdemo2-exec.test
+related to statically linked dlpreopened modules.
+
+"New" tests:
+------------
+103 tests behaved as expected.
+17 tests were skipped.
+
+The represents an upstream fix that allowed a previously-failing
+test (Run tests with low max_cmd_len) to succeed.
+
+===========================================================
+References:
+
+For a discussion of the packaging standards used by the MinGW
+project for pre-built components -- especially as related to
+the autotools such as autoconf, automake, and libtool, see:
+
+  here:     http://www.mingw.org/PackageIdentificationHOWTO
+  here:     http://article.gmane.org/gmane.comp.gnu.mingw.devel/3330
+  and here: http://article.gmane.org/gmane.comp.gnu.mingw.devel/3305
+
+If you're REALLY curious, the following threads are quite
+informative, if extremely long, and detail the discussion and
+reasoning behind the current packaging schema. Presented in
+reverse chronological order:
+  
+  "New Packages"
+  2009-06-21 22:38:19 GMT
+  http://thread.gmane.org/gmane.comp.gnu.mingw.devel/3297
+
+  "GCC 4.4.0: Naming conventions"
+  2009-04-18 06:35:28 GMT
+  http://thread.gmane.org/gmane.comp.gnu.mingw.devel/3225
+
+  "Standards for Building MinGW Release Packages"
+  2008-03-27 12:36:25 GMT
+  http://thread.gmane.org/gmane.comp.gnu.mingw.devel/2739
+
+===========================================================
+
+Port Notes:
+
+----------  libtool-2.4-1 -- 2010 Sep 25 -----------
+* Updated to latest upstream release 2.4
+  with patches form cygwin libtool-2.4-1
+
+----------  libtool-2.2.11a-1 -- 2010 Sep 03 -----------
+* Update to recent libtool development, based on git master
+  from 2010-09-02: 0f052db3b89835904b95d8336b2491e7b8eef8f7
+  with patches from cygwin libtool-2.2.11a-1
+
+----------  libtool-2.2.7a-1 -- 2009 Jul 25 -----------
+* First release of libtool under the new packaging standard.
+* Based on git master from 2009-06-30
+  00558363daebeb41c02ab8eaa9cb5218caf97867
+  with patches from cygwin libtool-2.2.7a-14, plus mingw fixes.
