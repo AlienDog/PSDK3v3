@@ -1,5 +1,5 @@
 #! /bin/sh
-# Generated from /mingw/src/autoconf/26/autoconf-2.67/bin/autoconf.as by GNU Autoconf 2.67.
+# Generated from /usr/src/autoconf/autoconf-2.67/bin/autoconf.as by GNU Autoconf 2.67.
 # Generated from autoconf.in; do not edit by hand.
 # autoconf -- create `configure' using m4 macros
 
@@ -386,7 +386,7 @@ exit_missing_arg='
 # restore font-lock: '
 
 # Variables.
-: ${AUTOM4TE='/mingw/bin/autom4te-2.67'}
+: ${AUTOM4TE='/usr/bin/autom4te-2.67'}
 autom4te_options=
 outfile=
 verbose=false

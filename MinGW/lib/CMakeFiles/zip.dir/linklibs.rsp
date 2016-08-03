@@ -1,0 +1,1 @@
+C:/PSDK3v3/MinGW/msys/1.0/lib/libz.dll.a -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 

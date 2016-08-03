@@ -25,7 +25,7 @@ eval 'case $# in 0) exec /bin/perl -S "$0";; *) exec /bin/perl -S "$0" "$@";; es
 
 BEGIN
 {
-  my $pkgdatadir = $ENV{'autom4te_perllibdir'} || '/mingw/share/autoconf';
+  my $pkgdatadir = $ENV{'autom4te_perllibdir'} || '/usr/share/autoconf';
   unshift @INC, $pkgdatadir;
 
   # Override SHELL.  On DJGPP SHELL may not be set to a shell
@@ -45,7 +45,7 @@ use File::Basename;
 use strict;
 
 # Data directory.
-my $pkgdatadir = $ENV{'AC_MACRODIR'} || '/mingw/share/autoconf';
+my $pkgdatadir = $ENV{'AC_MACRODIR'} || '/usr/share/autoconf';
 
 # $LANGUAGE{LANGUAGE} -- Automatic options for LANGUAGE.
 my %language;
@@ -545,21 +545,13 @@ sub handle_output ($$)
   # stdout is to be handled by hand :(.  Don't use fdopen as it means
   # we will close STDOUT, which we already do in END.
   my $out = new Autom4te::XFile;
-  my $atomic_replace;
-  if ($output eq '-' || (-e $output && ! -f $output))
+  if ($output eq '-')
     {
       $out->open (">$output");
-      $atomic_replace = 0;
     }
   else
     {
-      $out->open("$output.tmp", O_CREAT | O_WRONLY | O_TRUNC, oct ($mode));
-      if ($out) {
-        $atomic_replace = 1;
-      } else {
-        $out->open($output, O_CREAT | O_WRONLY | O_TRUNC, oct ($mode));
-        $atomic_replace = 0;
-      }
+      $out->open($output, O_CREAT | O_WRONLY | O_TRUNC, oct ($mode));
     }
   fatal "cannot create $output: $!"
     unless $out;
@@ -597,11 +589,6 @@ sub handle_output ($$)
     }
 
   $out->close();
-
-  if ($atomic_replace && !rename("$output.tmp", "$output")) {
-    move ("${output}.tmp", "$output")
-      or fatal "cannot rename ${output}.tmp as $output: $!";
-  }
 
   # If no forbidden words, we're done.
   return
@@ -1001,8 +988,7 @@ $icache_file->lock (LOCK_EX)
 # If autom4te is younger, then some structures such as C4che might
 # have changed, which would corrupt its processing.
 Autom4te::C4che->load ($icache_file)
-  if -f $icache && mtime ($icache) > mtime ($0)
-                && Autom4te::C4che->good_version ($icache_file);
+  if -f $icache && mtime ($icache) > mtime ($0);
 
 # Add the new trace requests.
 my $req = Autom4te::C4che->request ('input' => \@ARGV,

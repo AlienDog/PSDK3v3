@@ -31,7 +31,7 @@ package Language;
 
 BEGIN
 {
-  my $perllibdir = $ENV{'perllibdir'} || '/mingw/share/automake-1.11';
+  my $perllibdir = $ENV{'perllibdir'} || '/usr/share/automake-1.11';
   unshift @INC, (split ':', $perllibdir);
 
   # Override SHELL.  This is required on DJGPP so that system() uses
