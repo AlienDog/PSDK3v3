@@ -60,4 +60,4 @@ cd "$HOME"
 
 export PSSDK="/c/PSDK3v3"
 export VITASDK="/usr/local/vitasdk"
-export PATH="$VITASDK/bin:$PSSDK/mingw/msys/1.0/bin:$PSSDK/mingw/bin:$PSSDK/mingw/Python27:$PATH"
+export PATH="$VITASDK/bin:$PSSDK/mingw/msys/1.0/bin:$PSSDK/mingw/msys/1.0/lib:$PSSDK/mingw/bin:$PSSDK/mingw/Python27:$PATH"
