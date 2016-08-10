@@ -19,8 +19,8 @@ import gdb
 import os
 import os.path
 
-pythondir = '/home/build/build/install-native/share/gcc-arm-vita-eabi'
-libdir = '/home/build/build/install-native/arm-vita-eabi/lib'
+pythondir = '/var/atlassian/application-data/bamboo/xml-data/build-dir/PT-GCC49-JOB1/toolchain/install-native/share/gcc-arm-vita-eabi'
+libdir = '/var/atlassian/application-data/bamboo/xml-data/build-dir/PT-GCC49-JOB1/toolchain/install-native/arm-vita-eabi/lib'
 
 # This file might be loaded when there is no current objfile.  This
 # can happen if the user loads it manually.  In this case we don't

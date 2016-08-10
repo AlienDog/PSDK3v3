@@ -621,8 +621,10 @@ typedef enum SceEventFlagWaitTypes {
 	SCE_EVENT_WAITAND = 0,
 	/** Wait for one or more bits in the pattern to be set */
 	SCE_EVENT_WAITOR  = 1,
+	/** Clear all the bits when it matches */
+	SCE_EVENT_WAITCLEAR = 2,
 	/** Clear the wait pattern when it matches */
-	SCE_EVENT_WAITCLEAR = 0x20
+	SCE_EVENT_WAITCLEAR_PAT = 4
 } SceEventFlagWaitTypes;
 
 /**
@@ -1006,6 +1008,22 @@ typedef enum SceKernelIdListType {
  * @return The type, < 0 on error
  */
 SceKernelIdListType sceKernelGetThreadmgrUIDClass(SceUID uid);
+
+
+
+typedef struct	SceKernelLwMutexWork {
+	SceInt64 data[4];
+} SceKernelLwMutexWork;
+
+typedef struct SceKernelLwMutexOptParam {
+	SceSize	size;
+} SceKernelLwMutexOptParam;
+
+int sceKernelCreateLwMutex(SceKernelLwMutexWork *pWork,const char *pName, unsigned int attr, int initCount, const SceKernelLwMutexOptParam *pOptParam);
+int sceKernelDeleteLwMutex(SceKernelLwMutexWork *pWork);
+int sceKernelLockLwMutex(SceKernelLwMutexWork *pWork, int lockCount, unsigned int *pTimeout);
+int sceKernelUnlockLwMutex(SceKernelLwMutexWork *pWork, int unlockCount);
+
 
 #ifdef __cplusplus
 }
